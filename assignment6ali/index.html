@@ -1,0 +1,338 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Echooling</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  </head>
+  <body>
+    <!-- <nav class=" bg-primary" data-bs-theme="dark"> -->
+    <nav style="background-color: white;">
+
+         
+    <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#"><img src="data:image/png;base64,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" alt=""></a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <!-- <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Home</a>
+              </li> -->
+              <!-- <li class="nav-item">
+                <a class="nav-link" href="#">Link</a>
+              </li> -->
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Home
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">Home One</a></li>
+                  <li><a class="dropdown-item" href="#">Home Two</a></li>
+                  <!-- <li><hr class="dropdown-divider"></li> -->
+                  <li><a class="dropdown-item" href="#">Home Three</a></li>
+                </ul>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Pages
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">About</a></li>
+                  <li><a class="dropdown-item" href="#">Instructor</a></li>
+                  <li><a class="dropdown-item" href="#">Profile</a></li>
+                  <li><a class="dropdown-item" href="#">Login</a></li>
+                  <li><a class="dropdown-item" href="#">Sign up</a></li>
+                  <li><a class="dropdown-item" href="#">Events</a></li>
+                </ul>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Courses
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">Course</a></li>
+                  <li><a class="dropdown-item" href="#">Right Sidebar</a></li>
+                  <li><a class="dropdown-item" href="#">Course List</a></li>
+                  <li><a class="dropdown-item" href="#">Course Single</a></li>
+                </ul>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Blogs
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">Blog</a></li>
+                  <li><a class="dropdown-item" href="#">Blog Single</a></li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                 <a class="nav-link" href="#">Contact</a>
+              </li> 
+              <!-- <li class="nav-item">
+                <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+              </li> -->
+            </ul>
+            <form class="d-flex" role="search">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search Courses">
+              <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+          </div>
+        </div>
+      </nav>
+      
+      </nav>
+
+
+      <div id="carouselExampleCaptions" class="carousel slide">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+          <!-- <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button> -->
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="https://echooling-react.vercel.app/static/media/1.ddb463a076b58bbe0ea3.jpg" class="d-block w-100" alt="...">
+            <div class="carousel-caption d-none d-md-block cdata">
+            <p class="bg-danger para1">Great Quality Cocial Life</p>
+              <h1>Discover the world of <br>possible university</h1>
+              <!-- <button>Admissions</button> -->
+              <div class="d-grid gap-2 col-2 mx-auto">
+                <button class="btn btn-secondary" type="button">Admissions</button>
+                <!-- <button class="btn btn-primary" type="button">Button</button> -->
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="https://echooling-react.vercel.app/static/media/2.924b429a0601a89b04e1.jpg" class="d-block w-100" alt="...">
+            <div class="carousel-caption d-none d-md-block cdata">
+              <p class="bg-danger para1">Great Quality Cocial Life</p>
+              <h1>Discover the world of <br>possible university</h1>
+              <!-- <button>Admissions</button> -->
+              <div class="d-grid gap-2 col-2 mx-auto">
+                <button class="btn btn-secondary" type="button">Admissions</button>
+                <!-- <button class="btn btn-primary" type="button">Button</button> -->
+              </div>
+            </div>
+          </div>
+          <!-- <div class="carousel-item">
+            <img src="..." class="d-block w-100" alt="...">
+            <div class="carousel-caption d-none d-md-block">
+              <h5>Third slide label</h5>
+              <p>Some representative placeholder content for the third slide.</p>
+            </div>
+          </div>
+        </div> -->
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+
+   <div class="academics">
+    <h1>Academics</h1>
+      <img src="data:image/png;base64,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" alt="">
+   </div>
+   
+   <div class="cardsection">
+   <div class="card" style="width: 15rem;">
+    <img src="./cardimg1_files/1.045ce5893b04f4bde993.png" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">Lets Talk Science</h5>
+      <p class="card-text">Learn More -> </p>
+      <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
+    </div>
+  </div>
+  <div class="card" style="width: 15rem;">
+    <img src="./cardimg1_files/2.ec9d013b7d4f44fa4112.png" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">Innovatuve courses</h5>
+      <p class="card-text">Learn More -> </p>
+      <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
+    </div>
+  </div>
+  <div class="card" style="width: 15rem;">
+    <img src="./cardimg1_files/3.0cf44447da5e6fb16e49.png" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">Cloud Storage</h5>
+      <p class="card-text">Learn More -> </p>
+      <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
+    </div>
+  </div>
+  <div class="card" style="width: 15rem;">
+    <img src="./cardimg1_files/4.3d31b426e478a4d304b8.png" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">Online Education</h5>
+      <p class="card-text">Learn More -> </p>
+      <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
+    </div>
+  </div>
+  </div>
+
+
+<div class="container qw">
+  <div class="row">
+    <div class="col-md-8 col-sm-12">
+      <img src="./cardimg1_files/ab.fcda2469b98ffc37a148.png" alt="" class="img-fluid">
+    </div>
+    <div  class="col-md-4 col-sm-12">
+      <div class="qw2">
+        <h1>Welcome to <br>Echooling LMS Platform</h1>
+        <p class="qw">Education is both the act of teaching knowledge to others and
+          the act of receiving knowledge from someone else.</p>
+          <p class="qw">Have Questions? <div class="qw3">Get Free Guide </div></p>
+          <hr>
+          <p>Education also refers to the knowledge received through schooling instruction
+            and to the institution of teaching as a whole. The main purpose of education
+            is the integral development of a person.</p>
+              <a href="#" class="btn qw4 btn-light">Read More</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="academics">
+  <h1>Campus Life</h1>
+    <img src="data:image/png;base64,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" alt="">
+ </div>
+<div class="container lp qw">
+  <div class="row">
+    
+    <div  class="col-md-6 col-sm-12">
+      <div class="clx">
+        <h1>Do More,Stress Less</h1>
+        <p>Why I say old chap that is spiffing he legged
+          it in my flat easy peasy.</p>
+          <hr>
+          <h1>The Business Intelligence</h1>
+          <p>Why I say old chap that is spiffing he legged
+            it in my flat easy peasy.</p>
+            <hr>
+            <h1>System Administration</h1>
+            <p>Why I say old chap that is spiffing he legged
+              it in my flat easy peasy.</p>
+              
+          
+              <!-- <a href="#" class="btn qw4 btn-light">More about Campus Life</a> -->
+      </div>
+    </div>
+    <div class="cly col-md-5 col-sm-12">
+      <img src="./cardimg1_files/4.ff3894830e71cdd1965f.png" alt="" class="img-fluid">
+    </div>
+  </div>
+</div>
+
+<a href="#" class="btn clz btn-light">More About Campus Life</a>
+
+
+
+
+<div class="pc1 academics">
+  <h1>Echooling News And Blogs</h1>
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAJoAAAAmCAYAAAA894IZAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAY6SURBVHgB7VxbcuJGFL3dYM9PqoZZQTQrGHsFg1dg/BeTqTJegZnPVGIj7KTyaXsFhqrEzt/gFQyzgmFWEGUFIVWJMwOoe+7tFkLmIR4CmUY6VbIQEpTcOn363Hu7YZBigF+/s9S+l9V7cHMgWc4/z7jjv872HPjhDwdSzAQGSQORqcvzSJrnIMUOSNjBd3PYEhYsBNYGEC180UZSfgLOm+BmW2DX2pDCx2YTzS7lgHcKAPIVHiGhOG4yB3FAQgtbFzd5D+6zZtKJt1lEI2JlvuTxIb9GdSnMrlKkSrKtiCFJmeQ/+j06BY7eowIK8UJfj2Tl7FtNWhxatSpOgWyg2jXgp9/rkECYTzRFrt4RSBeVi+XDL0byMNkEIf8CxlqQQWJ1HxywG9HV5pfiDghugXDzwOEVEj0/4UoHtyZsiWqSPJ6ZRJuVXKRQQn5QpNoSzVgfrF3Ae/wmj8Sje3w9QV1rKyMctdGzzzkkv94IUlj+eYYKDhndwbhoq22F7WMO0WYiFyqWFHVFLPHQWIpSLQsXb/C+Bd4/FEbOMbDh9LYKi6Af3Cgf6g3jjFmLe9Hh4Ea20CY48ONtCyJg/Yl28QY9l7uP3a40ofEcbNy6ivZOf2vCusNGYjBm43Y0dMZBH3g89X+g9gCBHlTmYw1uFNB2gApyPkAWCTiHAq4n0aaqFymXvDaGXOMwiXDD6qbbAtMwqIbACnMQC4kLOshR7QWT1Z1JS+0lo70Fs0JF1kg+lrmf9hzWi2h2yYJMBwnGyqMN6g2LPNMwllzjoAjH3z/ycOQtQVZV9DxZyQmO50MHwc0yvJb2lzq/KDDXSMGNoCE5lIQOUJDDeH3c81kPounhsTJWvRhr4p8GuP/W18pzLRvVIqobVMIvCnjQuIMbwiDAwcgaA5zJaR0HhiLrpyVaKMGggb35eqPUKwzUFkLcjKrGGis5qTHnebznfZ3OGau8NTi7PY6faH3/JUR5fKOi95IPVxutXkGo6kUXO5ssT7iijcqwa0TO7bxY0qQbiqzF9ov4iKYI1jkZ779UxHW18cPjMCjJ24N3j/2ZsgrX2BEvA+87SLY9YxK8vtJJSufcw9nd1eqJFkYw3ajVxAyPQfx8iKqOnctvE5W/qtJDUYf6YX0EMuTqNEZ3p3d7YChWRzTlvygkh9LIuSQTjKBIxmr+MaUJpDgAe0ixdBu+D1xXhcqtDQZi+UQLM/hkDCeEv4mBfVjAiO2dfyxlHeT/5YmWoVq8wqd04h9viZcm1kizsCxQiUW6OESK/GP+elGTlFcjPTZpoDwh796QNCkQySp3pdDPyG0boLPv+7Uew8+DcUNoNEULNfgJjCCnoVr8M2DwGxj2H8z0ueEhlPE900aFxRTNJ1i3jJ0z5/dQhT7B/ksJFsRFsYLNZHlHDhb9j2f+LJHq4rDpTz1SM0IwIWoQ5iOab/A7Jc2tAMFU2YTXEpeimAU0ZIpOyR8/qHg+dxtlsP5JtoQ+r+qjZTAIsw2d00tEyY0gZwElMgFuvCOVKYdFcF78G/rpDgG7YEebuhMnwhVNNRAl3YYNPiSvRBQJ8shvP4q6F/4aqPsRKFd1RoOJNmLwhyPI1ODPD38kcCJ1TBYgllx01dbTYEC0UIPvTS5MDf78oDKT672W4hNEAa0rlaL/ZTFOeIyOAdFY56PuJUGDn/qvyFDz9fvkYA5EgdtzsCzV/y6jOrwmmjarlv9u6r9WA8aeQxRkspavaGpxiTnQRJNQwUZI/dcqEFQh2V8XujACP8+QMSYQIDBVOqLpuinBVodBWqINYvvlwqvWz4uUIimp12e3Ri2VzOLwiMMkDZUpVgYp770kaw6y3X3cz5/ioKQvJco1amAYOKRYPXim5r8W0lYR/tzf0RmsJxBisTWgT4iUaHGAgiqm1kQSLD11ew5QnXQwr69m4iyYlGhxgbO3gwNZ9sgTDlK+8+8vMVizvXccE9WMYJShNB7nh1htYZf+Mc2s5fzt2DQSTZBkLLBuALMCwt01dU5fSrS4MX79poOsaw2SsCMr0lHJ4MCkIvowUqI9BShBrnKXM9QrqTrjusemz05OifZUUKucULkkOxm7vlUV0Den/JcSbR1ApMt4P9BMv52xrB8HXCN8BZmQ6QyQKSowAAAAAElFTkSuQmCC" alt="">
+ </div>
+ 
+ <div class="cardsection">
+ <div class="card" style="width: 15rem;">
+  <img src="./cardimg1_files/1.987e87b22a8f90492eb4.jpg" class="card-img-top" alt="...">
+  <div class="card-body">
+    <p id="re" class="card-title">Education</p>
+    <p class="card-text">Kids future Schools & Corona Prevent to Growth</p>
+    <p>Charlie Doyle</p>
+    <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
+  </div>
+</div>
+<div class="card" style="width: 15rem;">
+  <img src="./cardimg1_files/2.8f0076f5a86838542c39.jpg" class="card-img-top" alt="...">
+  <div class="card-body">
+    <p id="re" class="card-title">Education</p>
+    <p class="card-text">Echooling future Schools & social Innovation</p>
+    <p>Charlie Doyle</p>
+    <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
+  </div>
+</div>
+<div class="card" style="width: 15rem;">
+  <img src="./cardimg1_files/3.356c9579b8137ed75a03.jpg" class="card-img-top" alt="...">
+  <div class="card-body">
+    <p id="re" class="card-title">Education</p>
+    <p class="card-text">7 Learning system design tips For better eLearning</p>
+    <p>Charlie Doyle</p>
+    <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
+  </div>
+</div>
+<div class="card" style="width: 15rem;">
+  <img src="./cardimg1_files/1.987e87b22a8f90492eb4.jpg" class="card-img-top" alt="...">
+  <div class="card-body">
+    <p id="re" class="card-title">Education</p>
+    <p class="card-text">Why schools should continue remote study</p>
+    <p>Charlie Doyle</p>
+    <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
+  </div>
+</div>
+</div>
+
+
+
+
+
+
+<footer class="bd-footer py-4 py-md-5 mt-5 bg-dark text-white">
+  <div class="container py-4 py-md-5 px-4 px-md-3 text-white">
+    <div class="row">
+      <div class="col-lg-3 mb-3">
+        <a class="d-inline-flex align-items-center mb-2 text-white text-decoration-none" href="/" aria-label="Bootstrap">
+          <img src="data:image/png;base64,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" alt="">
+        </a>
+        <ul class="list-unstyled small">
+          <li class="mb-2">There are course and event custom
+            post types so you can easily create and
+            manage course, events.
+          </li>
+        </ul>
+      </div>
+      <div class="col-6 col-lg-2 offset-lg-1 mb-3">
+        <h5>About Us</h5>
+        <ul class="list-unstyled">
+          <li class="mb-2"><a class="qm text-white" href="#">About</a></li>
+          <li class="mb-2"><a class="qm text-white" href="#">Courses</a></li>
+          <li class="mb-2"><a class="qm text-white" href="#">Events</a></li>
+          <li class="mb-2"><a class="qm text-white" href="#">Career</a></li>
+          <li class="mb-2"><a class="qm text-white" href="#">Become a Teacher</a></li>
+          <li class="mb-2"><a class="qm text-white" href="#">Contact</a></li>
+        </ul>
+      </div>
+      <div class="col-6 col-lg-2 mb-3">
+        <h5>Useful Links</h5>
+        <ul class="list-unstyled">
+          <li class="mb-2"><a class="qm text-white" href="#">Browse Library</a></li>
+          <li class="mb-2"><a class="qm text-white" href="#">Library</a></li>
+          <li class="mb-2"><a class="qm text-white" href="#">Partners</a></li>
+          <li class="mb-2"><a class="qm text-white" href="#">News & Blogs</a></li>
+          <li class="mb-2"><a class="qm text-white" href="#">FAQ</a></li>
+          <li class="mb-2"><a class="qm text-white" href="#">Tutorials</a></li>
+        </ul>
+      </div>
+      <div class="col-6 col-lg-2 mb-3">
+        <h5>Newsletter</h5>
+        <ul class="list-unstyled">
+          <li class="mb-2">Get the latest Echooling news delivered to your inbox</li>
+          <li class="mb-2"><input class="form-control" type="text" placeholder="Enter your email"></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+   
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+  </body>
+</html> 

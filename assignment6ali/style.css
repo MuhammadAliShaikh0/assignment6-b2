@@ -1,0 +1,60 @@
+.para1{
+    justify-content: center;
+    display: inline;
+    width: 10vh;
+    padding: 10px;
+    text-align: center;
+}
+.cdata{
+    margin-right: 450px;
+    margin-bottom: 150px;
+}
+
+.academics{
+    text-align: center;
+    margin-top: 40px;
+    color: rgb(9, 9, 60);
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+.cardsection{
+    display: flex;
+    margin-left: 100px;
+}
+.card{
+    margin-left: 15px;
+}
+.qw{
+    display: flex;
+    margin-top: 50px;
+}
+.qw2{
+    margin-top: 50px;
+}
+.qw3{
+    text-decoration: underline;
+    color: red;
+}
+.qw4{
+    border: 1px solid black;
+}
+
+.pc1{
+margin-top: 100px;
+}
+.cly{
+    margin-left: 50px;
+}
+.clx{
+    margin-left: 50px;
+}
+.clz{
+    margin-top: 40px;
+    margin-left: 40%;
+}
+#re{
+    color: red;
+}
+.qm{
+    text-decoration: none;
+}
+  
